@@ -153,7 +153,7 @@ func validateCourseRequest(r *http.Request) (*models.Course, map[string]interfac
 	var c models.Course
 
 	rules := govalidator.MapData{
-		"title": []string{"required"},
+		"title":     []string{"required"},
 	}
 
 	opts := govalidator.Options{

@@ -90,6 +90,7 @@ func UpdateProject(client *mongo.Client, w http.ResponseWriter, r *http.Request)
 			{"img", project.Img},
 			{"link", project.Link},
 			{"tools", project.Tools},
+			{"dateAdded", project.DateAdded},
 		}},
 	})
 
@@ -162,6 +163,7 @@ func validateProjectRequest(r *http.Request) (*models.Project, map[string]interf
 		"img":      	  []string{"required"},
 		"link":    	      []string{"required"},
 		"tools":    	  []string{"required"},
+		"dateAdded": 	  []string{"required"},
 	}
 
 	opts := govalidator.Options{

@@ -12,4 +12,5 @@ type Project struct {
 	Img string `json:"img"`
 	Link string `json:"link"`
 	Tools string `json:"tools"`
+	DateAdded string `json:"dateAdded"`
 }
