@@ -17,6 +17,7 @@ func respondJSON(w http.ResponseWriter, status int, payload interface{}) {
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
+	enableCors(&w)
 	w.WriteHeader(status)
 	w.Write(res)
 }
@@ -34,4 +35,9 @@ func getDocument(collection *mongo.Collection, ctx context.Context, title string
 		return nil, "Document doesn't exist"
 	}
 	return result, ""
+}
+
+// Enable CORS
+func enableCors(w *http.ResponseWriter) {
+	(*w).Header().Set("Access-Control-Allow-Origin", "*")
 }
