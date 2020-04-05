@@ -49,12 +49,26 @@ GET /api/projects
 ### Add a Project
 ``` bash
 POST /api/projects
+
+# Request body
+{
+	"Title":"My Website API",        				# string
+	"Description":"Simple RESTful API",  				# string
+	"Img":"assets/img/go.png",	  				# string
+	"Link":"https://github.com/liamreardon/my-website-api",	  	# string
+	"Tools":"Go, MongoDB",	  					# string
+	"DateAdded":"2020-04-06"  					# string
+}
 ```
 ### Update a Project
 ``` bash
 PUT /api/projects/:title
 
-# Request body
+# URL
+
+localhost:8080/api/projects/Project-Title
+
+# Request body of document to update
 {
 	"Title":"My Website API",        				# string
 	"Description":"Simple RESTful API",  				# string
@@ -77,12 +91,21 @@ GET /api/courses
 ### Add a Course
 ``` bash
 POST /api/courses
+
+# Request body
+{
+	"Title":"COMP 1000"	# string
+}
 ```
 ### Update a Course
 ``` bash
 PUT /api/courses/:title
 
-# Request body
+# URL
+
+localhost:8080/api/projects/Course-Title
+
+# Request body of document to update
 {
 	"Title":"COMP 1000"	# string
 }
