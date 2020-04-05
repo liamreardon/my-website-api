@@ -56,11 +56,12 @@ PUT /api/projects/:title
 
 # Request body
 {
-	"Title":"Example",
-	"Description":"Example",
-	"Img":"Example",
-	"Link":"Example",
-	"Tools":"Example"
+	"Title":"My Website API",        				# string
+	"Description":"Simple RESTful API",  				# string
+	"Img":"assets/img/go.png",	  				# string
+	"Link":"https://github.com/liamreardon/my-website-api",	  	# string
+	"Tools":"Go, MongoDB",	  					# string
+	"DateAdded":"2020-04-06"  					# string
 }
 ```
 ### Delete a Project
@@ -83,7 +84,7 @@ PUT /api/courses/:title
 
 # Request body
 {
-	"Title":"Example"
+	"Title":"COMP 1000"	# string
 }
 ```
 ### Delete a Course
